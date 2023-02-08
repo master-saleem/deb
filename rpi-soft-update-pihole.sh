@@ -76,7 +76,7 @@ function pause() {
 # Function ( Firmware Update )
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 func_firmware_update () {
-    sudo rpi-update
+    sudo rpi-update -y
 }
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -85,11 +85,11 @@ func_firmware_update () {
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 func_update () {
     sudo apt update
-    sudo apt -y upgrade
-    sudo apt-get dist-upgrade
-    sudo apt-get autoclean
-    sudo apt-get autoremove
+    sudo apt upgrade
     sudo apt-file update
+    sudo apt dist-upgrade
+    sudo apt autoclean
+    sudo apt autoremove
 }
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
